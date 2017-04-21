@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+         /*:root {
+            margin: 0;
+            padding: 0;
+        }*/
+        
+        .tip {
+            position: relative;
+            border: 1px solid black;
+            width: 50%;
+            margin-left: 30px;
+        }
+        
+        .tip:before {
+            content:'';
+            
+            position: absolute;
+            left: -10px;
+            top: 40%;
+            display: block;
+            /*border-right: 20px solid black;
+            border-top: 20px solid transparent;
+            border-bottom:20px solid transparent;*/
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+            border-right: 10px solid black;
+        }
+        .tip:after {
+            content:'';/*不能丢*/
+            
+            position: absolute;
+            left: -8.5px;
+            top: 40%;
+            display: block;
+            /*border-right: 20px solid black;
+            border-top: 20px solid transparent;
+            border-bottom:20px solid transparent;*/
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+            border-right: 10px solid white;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="tip">
+        losczxcas sadasd sfdfasmfmwmddaasdf fasdsa dadafas sadafasdsa sadaf safew ofodpspe
+    </p>
+
+<style>
+.chat-msg {
+    width: 300px; 
+    height: 80px; 
+    border: 1px solid #ccc; 
+    position: relative;
+}
+.chat-msg:before{
+    content:'';
+    position: absolute; 
+    left: -10px; 
+    top: 34px; 
+    border-top: 6px solid transparent; 
+    border-bottom: 6px solid transparent; 
+    border-right: 10px solid #ccc;
+}
+</style>
+ 
+<div class="chat-msg">hi，亲</div>
+</body>
+
+</html>

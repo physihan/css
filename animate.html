@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>animate</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.staticfile.org/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div style="border: 1px solid red;width:300px;height:300px;margin:30px auto;" id="target" class="">
+        hhhh
+    </div>
+    <button type="button" id="one">1</button>
+    <button type="button" id="two">2</button>
+    <button type="button" id="three">3</button>
+
+</body>
+<script src="https://cdn.staticfile.org/jquery/3.1.1/jquery.slim.min.js"></script>
+<script>
+    $('#one').click(function() {
+        $('#target')[0].className = ''
+    })
+    $('#two').click(function() {
+        $('#target')[0].className = ''
+
+        $('#target')[0].className = 'animated bounce'
+        setTimeout(function() {
+            console.log('aaa')
+        }, 1000)
+
+    })
+    $('#three').click(function() {
+        $('#target').addClass('animated bounce').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+            $('#target').removeClass('animated bounce')
+        })
+    })
+</script>
+
+</html>
