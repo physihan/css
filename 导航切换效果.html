@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+</head>
+<style>
+    .menu {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 20px;
+        height: 2px;
+        padding: 18px;
+        /*transform: translate(-50%, -50%);*/
+        margin-left: -10px;
+        margin-top:-1px;
+        background-clip: content-box;
+        background-color: #585247;
+    }
+    
+    .menu::after,
+    .menu::before {
+        position: absolute;
+        left: 0;
+        /* display: inline-block; */
+        content: '';
+        width: 100%;
+        height: 2px;
+        background-color: #585247;
+        /* background-clip: content-box; */
+        transition: transform 0.3s, background-color 0.3s;
+    }
+    
+    .menu::after {
+        transform: translateY(8px)
+    }
+    
+    .menu::before {
+        transform: translateY(-8px)
+    }
+    
+    .menu:hover::after {
+        transform: rotate(45deg)
+    }
+    
+    .menu:hover::before {
+        transform: rotate(135deg)
+    }
+</style>
+
+<body>
+
+    <div class="menu">
+
+
+    </div>
+
+</body>
+
+</html>
